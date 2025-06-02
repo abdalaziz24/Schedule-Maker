@@ -46,7 +46,7 @@ export default function ClassTimetableViewer() {
 
   return (
     <main className="p-4 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold mb-4">Class Timetable Viewer</h1>
+      <h1 className="text-3xl font-bold mb-4">Schedule Maker</h1>
 
       <div className="mb-6 bg-white p-4 rounded shadow">
         <h2 className="text-xl mb-2">Add Class</h2>

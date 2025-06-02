@@ -11,7 +11,11 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
         registerType: 'autoUpdate',
+        includeAssets: ['vite.svg'],
         manifest: {
+          name: "Schedule Maker",
+          short_name: "Schedule Maker",
+          theme_color: "#ffffff",
           icons: [
             {
               src: '/vite-192-192.png',

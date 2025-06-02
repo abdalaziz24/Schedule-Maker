@@ -9,6 +9,22 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
-    VitePWA({ registerType: 'autoUpdate' })
+    VitePWA({
+        registerType: 'autoUpdate',
+        manifest: {
+          icons: [
+            {
+              src: '/vite-192-192.png',
+              sizes: '192x192',
+              type: 'image/png',
+            },
+            {
+              src: '/vite-512-512.png',
+              sizes: '512x512',
+              type: 'image/png',
+            }
+          ]
+        }
+      })
   ],
 })

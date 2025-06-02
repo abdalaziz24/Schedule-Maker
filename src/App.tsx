@@ -2,8 +2,15 @@ import { useState, useEffect } from 'react';
 
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+type Table = {
+  day: string;
+  time: string;
+  className: string;
+  color: string;
+}
+
 export default function ClassTimetableViewer() {
-  const [timetable, setTimetable] = useState(() => {
+  const [timetable, setTimetable] = useState<Table[]>(() => {
     const stored = localStorage.getItem('timetable');
     return stored ? JSON.parse(stored) : [];
   });
@@ -25,8 +32,8 @@ export default function ClassTimetableViewer() {
     setFormData({ ...formData, time: '', className: '' });
   };
 
-  const deleteClass = (indexToDelete) => {
-    setTimetable(timetable.filter((_, i) => i !== indexToDelete));
+  const deleteClass = (indexToDelete : number) => {
+    setTimetable(timetable.filter((_, i: number) => i !== indexToDelete));
   };
 
   const clearSchedule = () => {
@@ -35,7 +42,7 @@ export default function ClassTimetableViewer() {
     }
   };
 
-  const filteredByDay = (day) => timetable.map((c, i) => ({ ...c, index: i })).filter((c) => c.day === day);
+  const filteredByDay = (day: string) => timetable.map((c, i: number) => ({ ...c, index: i })).filter((c) => c.day === day);
 
   return (
     <main className="p-4 max-w-7xl mx-auto">

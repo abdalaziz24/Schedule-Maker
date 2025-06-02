@@ -21,43 +21,39 @@ A simple and responsive **Progressive Web App (PWA)** to view and manage your we
    ```bash
    git clone https://github.com/your-username/class-timetable-viewer.git
    cd class-timetable-viewer
-Install dependencies:
+   ```
 
-bash
-Copy
-Edit
-npm install
-Start development server:
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-bash
-Copy
-Edit
-npm run dev
-Build for production:
+3. **Start development server:**
+   ```bash
+   npm run dev
+   ```
 
-bash
-Copy
-Edit
-npm run build
-Tech Stack
-React
+4. **Build for production:**
+   ```bash
+   npm run build
+   ```
 
-Vite
+---
 
-Tailwind CSS
+## Tech Stack
 
-Vite PWA Plugin
+- React  
+- Vite  
+- Tailwind CSS  
+- Vite PWA Plugin  
 
-Folder Structure
-css
-Copy
-Edit
+---
+
+## Folder Structure
+
+```
 src/
  ├── App.jsx
  ├── main.jsx
  └── index.css
-Deployment
-You can deploy this app easily to Netlify, Vercel, or GitHub Pages.
-
-Data Privacy
-All timetable data is stored locally in the browser. No external storage or accounts are used.
+```
